@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "3317e16d-7472-4029-a538-450c74857392",
+		"name": "AulaJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22150613"
+	},
+	"item": [
+		{
+			"name": "CadastroUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nome\": \"string3\",\r\n  \"username\": \"string3\",\r\n  \"senha\": \"string1234\"\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/v1/Usuario/Cadastrar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"v1",
+						"Usuario",
+						"Cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"string\",\r\n  \"senha\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/v1/Usuario/Autenticar",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"v1",
+						"Usuario",
+						"Autenticar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NTkwNDE3ODQsImV4cCI6MTY1OTA0NTM4NCwiaWF0IjoxNjU5MDQxNzg0fQ.3KcapcfGXZ5E6PbD8HWZI7aJqFMDt9XSil_tvI8c5hE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7044/v1/Usuario/Usuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"v1",
+						"Usuario",
+						"Usuarios"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
